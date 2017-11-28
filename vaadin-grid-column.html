@@ -243,8 +243,8 @@ This program is available under Apache License Version 2.0, available at https:/
     }
 
     _selectFirstTemplate(selector) {
-      return Array.prototype.filter.call(Polymer.dom(this).querySelectorAll(selector), el => {
-        return Polymer.dom(el).parentNode === this;
+      return Array.prototype.filter.call(Polymer.dom(this).queryDistributedElements(selector), el => {
+        return (el.assignedSlot || el).parentNode === this;
       })[0];
     }
 
