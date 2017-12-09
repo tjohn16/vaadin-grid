@@ -6,6 +6,24 @@
       }
     </style>
 
+    <h3>Simple columns</h3>
+    <vaadin-demo-snippet id='grid-basic-demos-simple-columns'>
+      <template preserve-content>
+        <dom-bind>
+          <template>
+            <!-- Fetch an array of users to be shown in the grid -->
+            <iron-ajax auto url="https://demo.vaadin.com/demo-data/1.0/people?count=200" handle-as="json" last-response="{{users}}"></iron-ajax>
+
+            <!-- The array is set as the <vaadin-grid>'s "items" property -->
+            <vaadin-grid items="[[users.result]]">
+              <vaadin-grid-simple-column path="firstName"></vaadin-grid-simple-column>
+              <vaadin-grid-simple-column path="lastName"></vaadin-grid-simple-column>
+              <vaadin-grid-simple-column path="address.city"></vaadin-grid-simple-column>
+            </vaadin-grid>
+          </template>
+        </dom-bind>
+      </template>
+    </vaadin-demo-snippet>
 
     <h3>Basic Binding</h3>
     <p>
@@ -21,10 +39,8 @@
       <template preserve-content>
         <dom-bind>
           <template>
-            <!-- Fetch an array of users to be shown in the grid -->
             <iron-ajax auto url="https://demo.vaadin.com/demo-data/1.0/people?count=200" handle-as="json" last-response="{{users}}"></iron-ajax>
 
-            <!-- The array is set as the <vaadin-grid>'s "items" property -->
             <vaadin-grid aria-label="Basic Binding Example" items="[[users.result]]">
 
               <vaadin-grid-column width="60px" flex-grow="0">

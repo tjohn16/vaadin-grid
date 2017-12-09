@@ -16,21 +16,14 @@
         <dom-module id="x-array-data-example">
           <template preserve-content>
             <vaadin-grid aria-label="Array Data Example" items="[[items]]">
+  
+            <vaadin-grid-column width="60px" flex-grow="0">
+              <template class="header">#</template>
+              <template>[[index]]</template>
+            </vaadin-grid-column>
 
-              <vaadin-grid-column width="60px" flex-grow="0">
-                <template class="header">#</template>
-                <template>[[index]]</template>
-              </vaadin-grid-column>
-
-              <vaadin-grid-column>
-                <template class="header">First Name</template>
-                <template>[[item.firstName]]</template>
-              </vaadin-grid-column>
-
-              <vaadin-grid-column>
-                <template class="header">Last Name</template>
-                <template>[[item.lastName]]</template>
-              </vaadin-grid-column>
+            <vaadin-grid-simple-column path="firstName"></vaadin-grid-simple-column>
+            <vaadin-grid-simple-column path="lastName"></vaadin-grid-simple-column>
 
             </vaadin-grid>
           </template>
@@ -80,15 +73,8 @@
                 <template>[[index]]</template>
               </vaadin-grid-column>
 
-              <vaadin-grid-column>
-                <template class="header">First Name</template>
-                <template>[[item.firstName]]</template>
-              </vaadin-grid-column>
-
-              <vaadin-grid-column>
-                <template class="header">Last Name</template>
-                <template>[[item.lastName]]</template>
-              </vaadin-grid-column>
+              <vaadin-grid-simple-column path="firstName"></vaadin-grid-simple-column>
+              <vaadin-grid-simple-column path="lastName"></vaadin-grid-simple-column>
 
             </vaadin-grid>
           </template>
@@ -151,15 +137,8 @@
                 <template>[[index]]</template>
               </vaadin-grid-column>
 
-              <vaadin-grid-column>
-                <template class="header">First Name</template>
-                <template>[[item.firstName]]</template>
-              </vaadin-grid-column>
-
-              <vaadin-grid-column>
-                <template class="header">Last Name</template>
-                <template>[[item.lastName]]</template>
-              </vaadin-grid-column>
+              <vaadin-grid-simple-column path="firstName"></vaadin-grid-simple-column>
+              <vaadin-grid-simple-column path="lastName"></vaadin-grid-simple-column>
 
             </vaadin-grid>
           </template>
@@ -218,15 +197,8 @@
                 <template>[[index]]</template>
               </vaadin-grid-column>
 
-              <vaadin-grid-column>
-                <template class="header">First Name</template>
-                <template>[[item.firstName]]</template>
-              </vaadin-grid-column>
-
-              <vaadin-grid-column>
-                <template class="header">Last Name</template>
-                <template>[[item.lastName]]</template>
-              </vaadin-grid-column>
+              <vaadin-grid-simple-column path="firstName"></vaadin-grid-simple-column>
+              <vaadin-grid-simple-column path="lastName"></vaadin-grid-simple-column>
 
             </vaadin-grid>
           </template>
